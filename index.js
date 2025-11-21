@@ -38,6 +38,60 @@ const data = {
   "updated_at": "2025-10-25T03:06:37Z"
 }
 
+const post = [
+  {
+    id: 1,
+    title: "Object One",
+    content: "This is the content of object one."
+  },
+  {
+    id: 2,
+    title: "Object Two",
+    content: "This is the content of object two."
+  },
+  {
+    id: 3,
+    title: "Object Three",
+    content: "This is the content of object three."
+  },
+  {
+    id: 4,
+    title: "Object Four",
+    content: "This is the content of object four."
+  },
+  {
+    id: 5,
+    title: "Object Five",
+    content: "This is the content of object five."
+  },
+  {
+    id: 6,
+    title: "Object Six",
+    content: "This is the content of object six."
+  },
+  {
+    id: 7,
+    title: "Object Seven",
+    content: "This is the content of object seven."
+  },
+  {
+    id: 8,
+    title: "Object Eight",
+    content: "This is the content of object eight."
+  },
+  {
+    id: 9,
+    title: "Object Nine",
+    content: "This is the content of object nine."
+  },
+  {
+    id: 10,
+    title: "Object Ten",
+    content: "This is the content of object ten."
+  }
+];
+
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
@@ -49,6 +103,10 @@ app.get('/github', (req, res) => {
     res.json(data)
 })
 
+app.get("/api/posts", (re, res) => {
+  res.send(post)
+})
+
 app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Example app listening on port ${process.env.PORT}`)
 })
